@@ -10,7 +10,7 @@
             
                 <div class="flexbox" style="margin-bottom:50px;justify-content: flex-start;">
                     <div class="card" style="width:20%; margin-right:60px;">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/plane2b.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/plane2b.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Airside-transfer</h4>
@@ -23,7 +23,7 @@
 
                     </div>
                     <div class="card" style="width:20%; margin-right:60px;">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/film2b.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/film2b.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Commercial</h4>
@@ -36,7 +36,7 @@
 
                     </div>
                     <div class="card" style="width:20%;margin-right:60px; ">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/organtrans2b.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/organtrans2b.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Organ Transfer</h4>
@@ -48,7 +48,7 @@
                         
                     </div>
                     <div class="card" style="width:20%;margin-right:60px; ">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/ambulance.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/ambulance.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Inter Facility/Hospital transfer</h4>
@@ -61,7 +61,7 @@
 
                     </div>
                     <div class="card" style="width:20%;margin-right:60px; ">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/eventsIconb.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/eventsIconb.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Event</h4>
@@ -74,7 +74,7 @@
                         
                     </div>
                     <div class="card" style="width:20%; margin-right:60px;">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/film2b.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/film2b.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Film</h4>
@@ -86,7 +86,7 @@
                         
                     </div>
                     <div class="card" style="width:20%; margin-right:60px;">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/rent.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/rent.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Rentals</h4>
@@ -98,7 +98,7 @@
                         
                     </div>
                     <div class="card" style="width:20%; margin-right:60px;">
-                        <div class="card-header card-header-icon" ><img style="height:100%;float:left;" src="Images/icon-images/trainingIconb.png"></div>
+                        <div class="card-header card-header-icon" ><img style="height:100%;" src="Images/icon-images/trainingIconb.png"></div>
                         <div class="card-inner">
 
                             <h4 style="color:darkblue">Training</h4>
