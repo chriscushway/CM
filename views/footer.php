@@ -5,7 +5,7 @@
 
 <footer >
    <div style="text-align:center;padding:100px;width:100%;">
-       <h3 class="header" style="color:white"><span style="text-decoration: overline;">OU</span>R DETAILS</h3>
+       <h4 class="header" style="color:white"><span style="text-decoration: overline;">OU</span>R DETAILS</h4>
        <div class="contact-div">
             <h6>Our Offices</h6>
             <hr>
@@ -28,7 +28,7 @@
             <a href="https://web.facebook.com/CapeMedics"><span>Facebook page</span></a>
         </div>
     </div>         
-    <div style="float:left;width:100%;padding-top:20px;color:white;background-color:#084c9e;text-align:center;">
+    <div style="float:left;width:100%;padding-top:20px;color:white;background-color:#002880;text-align:center;">
         <p>&copy; Copyright Cape Medics 2019</p>
     
     </div>

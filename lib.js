@@ -69,6 +69,16 @@ function dynamicBookingPage(){
     }
 }
 
+function dynamicTermsAndConditions(){
+    if($(".form-info-container").length){
+        if($(window).width()<=600){
+            $(".form-info-container").css("height",($(".form-info").outerHeight()));
+           
+        }
+        
+    }
+}
+
 function adjustDiv50(){
     
     var parent = $(document).find(".div-50-container");
@@ -79,6 +89,7 @@ function adjustDiv50(){
 adjustDiv50();
 dynamicHomePage();
 dynamicBookingPage();
+
 
 $(".cert").click(function(){
     
@@ -262,6 +273,7 @@ $(window).resize(function(){
     resizeSlides();
     dynamicHomePage();
     dynamicBookingPage();
+    dynamicTermsAndConditions();
 });
 
 function initSlideControl(){
@@ -690,5 +702,33 @@ function validateForm(formId){
    
 }
 
+dynamicTermsAndConditions();
+const options ={root:null,
+               threshold:0.7,
+               rootMargin:"0px"
+               };
+const sections = document.querySelectorAll(".anim");
+const observer = new IntersectionObserver(function(entries,observer){
+    entries.forEach(entry => {
+       
+        if(!entry.isIntersecting){
+            return;
+        }else{
+            if(entry.target.classList.contains("card-text")){
+                entry.target.style.animation = `anim2 1s ${entry.target.dataset.delay} forwards ease-out`;
+            }else{
+                   entry.target.style.animation = `anim1 1s ${entry.target.dataset.delay} forwards ease-out`; 
+                
+            }
+        }
+        
+        //observer.unobserve(entry.target);
+    })
+}, options); 
+
+
+sections.forEach(section => {
+   observer.observe(section); 
+});
 
 //End of general validation functions
