@@ -19,8 +19,24 @@ nav{
     
     
 }
-.anim,.animt{
+.anim{
     opacity:0;
+}
+
+.construction-div{
+    padding:100px;
+    
+}
+
+.construction-div h1{
+    text-transform:uppercase;
+    font-weight:bold;
+    color:navy;
+}
+.construction-div h3{
+    text-transform:uppercase;
+    font-weight:bold;
+    color:red;
 }
 
 nav a{
@@ -322,13 +338,6 @@ a:hover{
     left:200px;
 }
 
-.divider{
-    height:100%;
-    width:1.5px;
-    background-color: black;
-    float:left;
-}
-
 .contact-div{
     width:33%;
     float: left;
@@ -534,7 +543,6 @@ footer{
 .card-inner{
     
     width:100%;   
-    
     text-align: left;
     
 }
@@ -552,39 +560,31 @@ footer{
     width:calc(50% - 50px);
     box-sizing: border-box;
     margin:50px 50px 50px 0;
-    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
+.film-box hr{
+    background-color:darkblue;
+    height:1.5px;
 }
 
 .film-box-title{
     
-    width:calc(50% - 0.75px);
     color:black;
     padding:20px;
-    float:left;
-    text-align: left;
-    position: relative;
-    
     
 }
 
 .film-box-title h2{
     
-    position: absolute;
-    top:100%;
-    
     font-weight: bold;
-    
     text-transform: uppercase;
     color:darkblue;
 }
 
 .film-box-info{
     
-    width:calc(50% - 0.75px);
-    padding:30px;
-    float:left;
-    color:gray;
+    padding: 30px;
 }
 
 
@@ -1456,12 +1456,20 @@ div[class*="input-block"],.sub-form{
 
 @media screen and (max-width: 600px){
     
-    .pad, .pad-less{
-        padding:50px 30px;
+    .pad, .pad-less,.col-50,.small-info-box-inner,.footer-div{
+        padding:50px 30px !important;
     }
     
+    
+    .col-50,.film-box{
+        width:100%;
+    }
     .card,.booking{
         flex: 0 0 100% !important;
+    }
+    
+    .text-div,.parallax-4{
+        height:auto !important;
     }
     
     nav{
