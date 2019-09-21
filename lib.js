@@ -704,7 +704,7 @@ function validateForm(formId){
 
 dynamicTermsAndConditions();
 const options ={root:null,
-               threshold:0.7,
+               threshold:0.4,
                rootMargin:"0px"
                };
 const sections = document.querySelectorAll(".anim");
@@ -717,7 +717,11 @@ const observer = new IntersectionObserver(function(entries,observer){
             if(entry.target.classList.contains("card-text")){
                 entry.target.style.animation = `anim2 1s ${entry.target.dataset.delay} forwards ease-out`;
             }else{
-                   entry.target.style.animation = `anim1 1s ${entry.target.dataset.delay} forwards ease-out`; 
+                if(entry.target.tagName=="SPAN"){
+                    entry.target.style.animation = `anim3 1s ${entry.target.dataset.delay} forwards ease-out`; 
+                }else{
+                    entry.target.style.animation = `anim1 1s ${entry.target.dataset.delay} forwards ease-out`; 
+                }
                 
             }
         }
