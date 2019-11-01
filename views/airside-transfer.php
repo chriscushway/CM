@@ -1,21 +1,10 @@
 <div class="parallax-4 resize-para" style="height:460px !important;background: url('Images/backgrounds/background2.jpg')!important;background-size: cover !important; !important;background-attachment: fixed !important;"><div class="small-info-box" style="opacity:0.4"></div></div>
         <div class="form-container-div">
-             <div class="form-info-container">
-                <div class="form-info">
-                    <h3>Terms and Conditions</h3>
-                    <hr style="background-color:red">
-                    <p align="left">Bookings are only final when you receive an email to confirm your booking.<br><br>
-                        A 50% cancellation fee applies when less than 24 hour notice is given to cancel. There is no penalty with greater than 24 hour notification.<br><br>
-                        Additional fees apply for all bookings with less than 12 hours notification. This will reflect on the Proforma Invoice.
-                        CC/EFT Payments applies to all non-account holders.</p>
-                    <p id="invoice"></p>
-                
-                </div>
-        
-            </div>
+             
+               
             <form id="airsideForm">
                 <h1>Airside Transfer Booking</h1>
-              	<input type="hidden" name="AIRSIDE-TRANSFER-BOOKING" value="header">
+              	<input type="hidden" name="AIRS+IDE-TRANSFER-BOOKING" value="header">
                 <h4>Flight Details</h4>
                 <input type="hidden" name="Flight-details:" value="header">
                 <hr>
@@ -24,15 +13,15 @@
                 <div class="checkbox-form-container">
                     <div class="checkbox" allowOne="true">
                         <label class="container">Domestic
-                            <input class="cb" type="checkbox" name="Domestic" value=1>
+                            <input class="cb" type="checkbox" data-display = "Domestic flight" name="domestic" data-index = 0 data-type="special flight-info">
                             <span class="checkmark"><span class="fas fa-check"></span></span>
                         </label>
                         <label class="container">International
-                            <input class="cb" type="checkbox" name="International" value=1>
+                            <input class="cb" data-index = 0 type="checkbox" name="international" data-type="special flight-info">
                             <span class="checkmark"><span class="fas fa-check"></span></span>
                         </label>
                         <label class="container">Both
-                            <input class="cb" type="checkbox" name="checkbox-both" value=1>
+                            <input class="cb" type="checkbox" data-index = 0 name="both" data-type="special flight-info">
                             <span class="checkmark"><span class="fas fa-check"></span></span>
                         </label>
                     </div>
@@ -101,15 +90,15 @@
                 <div class="checkbox-form-container">
                     <div class="checkbox" allowOne="true">
                             <label class="container">Arrival
-                                <input class="cb" type="checkbox" name="arrival" value=1>
+                                <input class="cb" type="checkbox" data-index = 1 name="arrivals" data-type="special flight-info">
                                 <span class="checkmark"><span class="fas fa-check"></span></span>
                             </label>
                             <label class="container">departures
-                                <input class="cb" type="checkbox" name="departure" value=1>
+                                <input class="cb" type="checkbox" data-index = 1 data-type="special flight-info" name="departures">
                                 <span class="checkmark"><span class="fas fa-check"></span></span>
                             </label>
                             <label class="container">Both
-                                <input class="cb" type="checkbox" name="both" value=1>
+                                <input class="cb" data-index = 1 type="checkbox" name="both" data-type="special flight-info">
                                 <span class="checkmark"><span class="fas fa-check"></span></span>
                             </label>
                     </div>
@@ -119,11 +108,11 @@
                 <div class="checkbox-form-container">
                     <div class="checkbox" allowOne="true">
                             <label class="container">BLS/ILS
-                                <input class="cb" type="checkbox" name="ils" value=1>
+                                <input class="cb" type="checkbox" data-index = 2 name="ils" data-type="special flight-info">
                                 <span class="checkmark"><span class="fas fa-check"></span></span>
                             </label>
                             <label class="container">ALS
-                                <input class="cb" type="checkbox" name="als" value=1>
+                                <input class="cb" data-index = 2 type="checkbox" name="als" data-type="special flight-info">
                                 <span class="checkmark"><span class="fas fa-check"></span></span>
                             </label>
                     </div>
@@ -158,27 +147,27 @@
                 <input type="hidden" name="Services-needed:" value="small-header">
                 <div class="checkbox" >
                     <label class="container checkbox-4">Wheelchair
-                        <input class="cb" type="checkbox" name="wheelchair" value=1>
+                        <input class="cb" type="checkbox" data-display = "Wheelchair" name="wheelchair" value=0>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container checkbox-4">Stretcher
-                        <input class="cb" type="checkbox" name="stretcher" value=1>
+                        <input class="cb" type="checkbox" data-display = "Stretcher" name="stretcher" value=1>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container checkbox-4">IV Therapy
-                        <input class="cb" type="checkbox" name="iv" value=1>
+                        <input class="cb" type="checkbox"  data-display ="IV Therapy" name="iv" value=1>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container checkbox-4">Oxygen
-                        <input class="cb" type="checkbox" name="oxygen" value=1>
+                        <input class="cb" data-display = "Oxygen" type="checkbox" name="oxygen" value=1>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container checkbox-4">Intubated/Ventilated
-                        <input class="cb" type="checkbox" name="ils" value=1>
+                        <input class="cb" data-display = "Intubated/Ventilated" type="checkbox" name="ils" value=1>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container checkbox-4">Urinary catheter
-                        <input class="cb" type="checkbox" name="als" value=1>
+                        <input class="cb" data-display = "Urinary catheter" type="checkbox" name="als" value=1>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                 </div>
@@ -359,7 +348,9 @@
                         </label>
                     </div>
                 </div>
-                <br><br>
+                <?php include("termsAndConditions.php") ?>
+                
+                <?php include("invoice.php") ?>
                 <button type="button" class="fill book" action="makeBooking" >make booking request</button>
             </form>
            

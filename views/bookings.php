@@ -1,7 +1,7 @@
 <div class="parallax-4 resize-para" style="height:460px !important;background: url('Images/backgrounds/background2.jpg')!important;background-size: cover !important; !important;background-attachment: fixed !important;"><div class="small-info-box" style="opacity:0.4"></div></div>
         
         
-        <div class="pad-less" style="width:100%;background-color: white;">
+        <div id ="booking1" class="pad-less" style="width:100%;background-color: white;">
             <h1 class="header"><span style="text-decoration: overline;">BO</span>OKINGS</h1>
             <div class="sub-text">
                 <span style="font-weight:500;color:gray">Please ensure you read all the terms and conditions before making a booking request. All bookings are not official until confirmation is sent to you from Cape Medics or you are contacted by Cape Medics</span>

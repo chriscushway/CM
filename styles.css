@@ -17,7 +17,6 @@ nav{
     align-items: center;
     z-index:20;
     
-    
 }
 .anim{
     opacity:0;
@@ -47,7 +46,6 @@ nav a{
     font-family: 'Open Sans', sans-serif;
     color:navy;
    
-    
 }
 
 nav button{
@@ -934,8 +932,7 @@ div[class*="100"]{
 /*form styling */
 form{
     
-    width:70%;
-    border-right:2px solid darkblue;
+    width:100%;
     padding:30px;
     float:left;
     background-color:white;
@@ -1300,23 +1297,13 @@ div[class*="input-block"],.sub-form{
     display:flex;
     justify-content: space-around;
     align-items: flex-start;
-    width:30%;
+    width:100%;
     background-color: white;
     float:right;
-
-    
 }
 
 .form-info{
-    
-    position: -webkit-sticky;
-    position: sticky;
-    top:0;
-    width:100%;
-    padding:50px;
-    text-align:center;  
-    top:120px;
-   
+    width:100%; 
 }
 
 .form-info h3{
@@ -1327,14 +1314,61 @@ div[class*="input-block"],.sub-form{
     display:none;
 }
 
+.invoice {
+    display:none;
+    border:solid navy thin;
+    padding:20px;
+    width:100%;
+    float:left;
+    margin-bottom:20px;
+}
+
+.invoice hr{
+    background-color: grey;
+    height:1px !important;
+    border:none;
+}
+
+.invoice-info{
+    font-family: 'Open Sans', sans-serif;
+    float:left;
+    font-size:100%;
+    width:100%;
+    padding:20px 30px;
+}
+.inv-left-text{
+    float:left;
+}
+
+.inv-right-text{
+    float:right;
+    font-weight:bold;
+    color:green;
+}
+
+.sum{
+    text-decoration: overline;
+}
+
+.sum-text{
+    text-decoration: overline;
+    
+}
 /* queries */
 @media screen and (max-width: 700px){
     
-   
     form{
         width:100% !important;
     }
 }
+
+@media screen and (min-width: 1500px){
+    
+    .form-container-div{
+        padding:50px 200px;
+    }
+}
+   
 
 @media screen and (max-width: 600px){
     .sub-form div[class*="33"]{
@@ -1346,7 +1380,6 @@ div[class*="input-block"],.sub-form{
         float:none;
         width:100% !important;
     }
-    
 
 }
 
@@ -1364,11 +1397,24 @@ div[class*="input-block"],.sub-form{
     
 }
 
+@media screen and (max-width: 1500px){
+    #booking1{
+        padding:100px 50px !important;
+    }
+     .card,.booking{
+        flex: 0 0 calc(25% - 60px) !important;
+    }
+}
+
 @media screen and (max-width: 1250px){
     .div-50{
         
         width:100%;
         
+    }
+    
+     .card,.booking{
+        flex: 0 0 25% !important;
     }
     
     .card{
@@ -1377,9 +1423,9 @@ div[class*="input-block"],.sub-form{
         
     }
     
-    .booking-container{
-        padding:100px;  
-    }   
+    .form-container-div{
+        padding:50px;
+    }
     
     .small-info-box-inner{
         padding-right:200px !important;
@@ -1395,11 +1441,17 @@ div[class*="input-block"],.sub-form{
     .small-info-box-inner{
         padding-right:100px !important;
     }
-    
+   
     .sub-text{
         
         width:65%;
         
+    }
+}
+
+@media screen and (max-width: 1000px){
+     .card,.booking{
+        flex: 0 0 calc(50% - 60px) !important;
     }
 }
 
@@ -1438,7 +1490,12 @@ div[class*="input-block"],.sub-form{
         width:100%;
         
     }
-    
+    .form-info{
+        padding:0px !important;
+    }
+    .form-info-container{
+        padding:20px;
+    }
     
     
    
@@ -1450,6 +1507,10 @@ div[class*="input-block"],.sub-form{
         
         width:100%;
         
+    }
+    
+    .form-info-container{
+        padding:20px;
     }
     
 }

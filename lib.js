@@ -103,224 +103,11 @@ $(".cert").click(function(){
    
 });
 
-//-----carousel variables----
-const slides=Array();
-var formWidth;
-//----carousel variables end ----
+var airside_prices = {internationaldeparturesils:4180,internationalarrivalsils:2410,internationaldeparturesals:5540,internationalarrivalsals:3810,domesticdeparturesils:2560,domesticarrivalsils:2210,domesticdeparturesals:3740,domesticarrivalsals:2940};
+var airside_bool = ["","",""];
+var airside_KeyString = "";
 
-//----carousel functions-----
-function initSlideArray(){
-     $(".slide").each(function(){
-        slides.push($(this));
-    });
-}
-
-function getFormWidth(){
-    return formWidth;
-}
-
-
-function reassignLeft(left){
-    if(left<=20 && left>0){
-        return 0;
-    }else
-        return left;
-}
-
-function initSlides(index){
-    var left=-index*getFormWidth();
-    $(".slide").each(function(){
-        $(this).css("left",left+'px');
-        left+=getFormWidth()
-    });
-    
-    $(".carousel-cont").css("height",slides[index].height()+BottomElement()+'px');
-}
-
-
-$(".next").click(function(){
-    
-    for(var i=0;i<slides.length;i++){
-        var left=parseInt(slides[i].css("left"));
-        if(left==0 && i!=slides.length-1){
-            animateFormHeight(false,i,animateSlides,false);
-            break;
-            }  
-    }
-        
-});
-
-$(".prev").click(function(){
-   
-    for(var i=0;i<slides.length;i++){
-        var left=parseInt(slides[i].css("left"));
-        //console.log(left);
-        if(left==0 && i!=0){
-            animateFormHeight(true,i,animateSlides,false);
-            break;
-        }  
-    }
-    
-});
-
-function slideLeft(cont){
-    for(var i=0;i<slides.length;i++){
-        var left=parseInt(slides[i].css("left"));
-        //console.log(left);
-        if(left==0 && i!=0 || cont){
-            animateFormHeight(false,i,animateSlides,cont);
-            break;
-        }  
-    }
-}
-function checkLastSlide(cont,index){
-    if(cont && parseInt(slides[index-1].css("left"))==0){
-        console.log("last slide reached");
-        initSlides(0);
-    }
-
-}
-
-function animateSlides(lor,index,markSlideNumber,cont){
-    var left=0;
-    if(lor){
-        for(var i=0;i<slides.length;i++){
-            left=getFormWidth();
-            slides[i].animate({
-                left:'+='+left+'px'
-            },1000,function(){
-                initSlideControl();
-                checkLastSlide(cont,i);
-            });
-        }
-    }else{
-        for(var i=0;i<slides.length;i++){
-            left=getFormWidth();
-            slides[i].animate({
-                left:'-='+left+'px'
-            },1000,function(){
-                initSlideControl();
-                checkLastSlide(cont,i);
-            });
-        }
-    }
- 
-}
-
-function BottomElement(){
-    if($(".bottom").length){
-        return $(".bottom").height();
-    }else{
-        return 0;
-    }
-}
-
-function animateFormHeight(bool,index,func,cont){
-    if(bool){
-        if(slides[index-1].height()+BottomElement()!=$(".carousel-cont").height()){
-            $(".carousel-cont").animate({
-                height:slides[index-1].height()+BottomElement()+"px"
-            },500,function(){
-                func(bool,index,markSlideNumber,cont);
-            });
-        }else{
-            func(bool,index,markSlideNumber,cont);
-            
-        }
-    }else{
-        if(slides[index+1].height()+BottomElement()!=$(".carousel-cont").height()){
-            $(".carousel-cont").animate({
-                height:slides[index+1].height()+BottomElement()+"px"
-            },500,function(){
-                func(bool,index,markSlideNumber,cont);
-            });
-        }else{
-            func(bool,index,markSlideNumber,cont);
-           
-        }
-    } 
-    
-}
-
-function markSlideNumber(){
-    var left;
-    for(var i=0;i<slides.length;i++){
-        left=parseInt(slides[i].css("left"));
-        if(left==0 ){
-            $(".index-button").eq(i).addClass("active");
-        }else{
-            $(".index-button").eq(i).removeClass("active");
-        }
-    }
-}
-
-$(".index-button").click(function(){
-
-   initSlides($(this).attr("value"));
-    markSlideNumber();
-});
-
-function resizeSlides(){
-    for(var i=0;i<slides.length;i++){
-        if(parseInt(slides[i].css('left'))==0){
-            initSlides(i);
-        }
-    }
-}
-$(window).resize(function(){
-    
-    formWidth=$(".slide-show").outerWidth();
-    resizeSlides();
-    dynamicHomePage();
-    dynamicBookingPage();
-    dynamicTermsAndConditions();
-});
-
-function initSlideControl(){
-    if($(".index-button").length){
-        markSlideNumber();
-        return true;
-    }else{
-        return false;
-    }
-}
-
-if($(".slide-show").length){
-    formWidth=$(".slide-show").outerWidth();
-    initSlideArray();
-    initSlides(0);
-    initSlideControl();
-}
-
-function progress(){
-    
-    $(".progress-bar").animate({
-    
-        left:'0%'
-        
-        },4000,"easeOutSine",function(){
-    
-            $(".progress-bar").css({
-                "left":"-100%"
-            }).delay(2000);
-            slideLeft(true);
-            setTimeout(progress,100);
-        });
-        
-}
-
-function stopSlider(){
-    
-    $(".progress-bar").stop();
-    $(".progress-bar").css("left","-100%");
-}
-
-$(".pauseable").on("mouseenter",stopSlider).on("mouseleave",progress);
-if($(".progress-bar").length){
-    progress();
-}
-//------carousel functions end-----------
-
+console.log(airside_prices["internationaldeparturesils"]);
 //----------Checkbox functions ---------
 function resizeForms(parent,length){
     
@@ -405,7 +192,7 @@ function checkboxFormReveal(checkbox,parent,index,name){
         }
     });
 }
-
+var sum = 0;
 $("input:checkbox").click(function(){
     
     var parent=$(this).closest(".checkbox-form-container");
@@ -418,8 +205,104 @@ $("input:checkbox").click(function(){
     if($(this).hasClass("cb")){
         checkboxFormReveal($(this),parent,index,$(this).attr("name"));
     }
+    
+    if(!$(this).prop("checked")){
+        removeOldInvoiceInfo($(this));
+        removeSpecial($(this));
+        
+    }else{
+        if($(this).attr("data-type")!=undefined){
+            if($(this).attr("data-type").includes("special")){
+                console.log("here");
+                removeSpecial($(this));
+                handleSpecialCase($(this)); 
+                displayInvoice();
+            }
+            
+        }else{
+            checkInvoice($(this)); 
+            removeOldInvoiceInfo($(this));
+            displayInvoice();
+        }
+        
+    } 
 
 });
+function removeSpecial(checkbox){
+    
+    if($("div[class*='"+checkbox.attr('data-type')+"']").length){
+        $("div[class*='"+checkbox.attr('data-type')+"']").remove();
+        sum-=airside_prices[airside_KeyString];
+    }
+}
+function handleSpecialCase(checkbox){
+    if(checkbox.attr('data-type').includes('flight-info')){
+        airside_bool[parseInt(checkbox.attr('data-index'))]=checkbox.attr('name');
+        if(checkFilledIn(airside_bool)){
+            sum+=airside_prices[""+airside_KeyString];
+            $(".invoice").append("<div style='width:100%' name ='"+airside_bool[0]+"' class='invoice-info "+checkbox.attr('data-type')+"'>Medical Escort service cost  </span><span class='inv-right-text'>R "+airside_prices[""+airside_KeyString]+"</span></div>");
+            addSum();
+            
+        }else{
+            
+        }
+    }
+    
+}
+function checkFilledIn(array){
+    airside_KeyString="";
+    for(var i = 0;i<array.length;i++){
+        if(array[i]==""){
+            
+            return false;
+        }else{
+            
+            airside_KeyString += array[i];
+        }
+    }
+    console.log("keyString: "+airside_KeyString);
+    return true;
+}
+
+function removeOldInvoiceInfo(checkbox){
+        $(".invoice-info").each(function(){
+            if(!$("input:checkbox[name='"+$(this).attr('name')+"']").prop("checked")){
+                $(this).remove();
+                addSum();
+            }
+        });
+}
+function addSum(){
+    $(".sum").remove();
+    $(".invoice").append("<div style='width:100%' class='invoice-info sum'>Total </span><span class='inv-right-text sum-text'>R "+sum+"</span></div>");
+}
+function sumCheckBoxVals(){
+    sum = 0;
+    if(airside_KeyString!=""){
+        sum += airside_prices[airside_KeyString];
+    }
+    $("input:checkbox").each(function(){
+        if($(this).prop("checked") && $(this).attr('data-type')==undefined){
+            sum+=parseInt($(this).attr('value'));
+        }
+    });
+}
+
+function checkInvoice(checkbox){
+    //If the element is not already in the invoice
+    if(!$(".invoice-info[name='"+checkbox.attr("name")+"']").length){
+        $(".invoice").append("<div class='invoice-info' name='"+checkbox.attr('name')+"'> <span class='inv-left-text'>"+checkbox.attr('data-display')+"</span><span class='inv-right-text'>R "+checkbox.attr('value')+"</span></div>");
+        sumCheckBoxVals();
+        addSum();
+    }
+
+}
+
+function displayInvoice(){
+    if($(".invoice-info").length){
+        $(".invoice").show();
+    }
+}
 
 //----------Checkbox functions end ---------
 
@@ -608,7 +491,6 @@ $(".book").click(function(e){
     e.preventDefault();
     var form=$(this).parents("form");
     var data=validateForm(form.attr("id"));
-    
     if(data[data.length -1]=="1"){
       		
           $.ajax({
@@ -616,16 +498,12 @@ $(".book").click(function(e){
           	url: "actions.php?action="+$(this).attr("action"),
           	data:data,
         	success: function(data){
-            
               	alert(data);
             
             }
-        
         });
-      
-        
     }
-    
+    sum = 0;
 });
 
 function checkEmpty(input){

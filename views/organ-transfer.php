@@ -1,4 +1,4 @@
-  <div class="parallax-4" style="height:460px !important;background: url('/Images/backgrounds/background2.jpg')!important;background-size: cover !important; !important;background-attachment: fixed !important;"><div class="small-info-box" style="opacity:0.4"></div></div>
+<div class="parallax-4 resize-para" style="height:460px !important;background: url('Images/backgrounds/background2.jpg')!important;background-size: cover !important; !important;background-attachment: fixed !important;"><div class="small-info-box" style="opacity:0.4"></div></div>
         <div class="form-container-div">
             <form>
             <h1>Organ Transfer Booking</h1>
@@ -9,15 +9,15 @@
             <div class="checkbox-form-container">
                 <div class="checkbox" allowOne="true">
                     <label class="container">Load
-                        <input class="cb" type="checkbox" name="Domestic" value=1>
+                        <input class="cb" type="checkbox" data-display="Loading of organ" name="load" value=850>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container">Offload
-                        <input class="cb" type="checkbox" name="International" value=1>
+                        <input class="cb" type="checkbox" data-display="Offloading/retrieving of organ" name="International" value=850>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                     <label class="container">Both
-                        <input class="cb" type="checkbox" name="checkbox-both" value=1>
+                        <input class="cb" type="checkbox" data-display="loading and Offloading/retrieving of organ" name="checkbox-both" value=1700>
                         <span class="checkmark"><span class="fas fa-check"></span></span>
                     </label>
                 </div>
@@ -117,21 +117,8 @@
                     </label>
                 </div>
             </div>
-            <br><br>
+            <?php include("termsAndConditions.php") ?>
+            <?php include("invoice.php") ?>
             <button class="fill">make booking request</button>
         </form>
-            
-            <div class="form-info-container">
-                <div class="form-info">
-                    <h3>Terms and Conditions</h3>
-                    <hr>
-                    <p align="left">Bookings are only final when you receive an email to confirm your booking.<br><br>
-                        A 50% cancellation fee applies when less than 24 hour notice is given to cancel. There is no penalty with greater than 24 hour notification.<br><br>
-                        Additional fees apply for all bookings with less than 12 hours notification. This will reflect on the Proforma Invoice.
-                        CC/EFT Payments applies to all non-account holders.</p>
-                    <p id="invoice"></p>
-                
-                </div>
-        
-            </div>
         </div>

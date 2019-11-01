@@ -24,7 +24,7 @@
             <div class="film-box">
                 
                 <div class="film-box-title"><h2>MAD MAX</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape medics helped provide medical, fire and rescue and safety assistance during the filming of Mad max fury road</p>
@@ -34,7 +34,7 @@
             <div class="film-box">
             
                 <div class="film-box-title"><h2>Generation Kill</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape Medics provided 4 medics, a paramedic, malaria clinic and an ambulance</p>
@@ -44,7 +44,7 @@
             <div class="film-box">
             
                 <div class="film-box-title"><h2>Blood Diamond</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape Medics provided 5 Medics, a flight paramedic, base camp Dr and clinic and an on site helicopter </p>
@@ -54,7 +54,7 @@
             <div class="film-box">
             
                 <div class="film-box-title"><h2>Primevil</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape Medics provided 3 Medics and a cold exposure clinic</p>
@@ -64,7 +64,7 @@
             <div class="film-box">
             
                 <div class="film-box-title"><h2>Prisoner</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape Medics provided provided ambulance, construction and main unit services</p>
@@ -74,7 +74,7 @@
             <div class="film-box">
             
                 <div class="film-box-title"><h2>Last House on the left</h2></div>
-                <div class="divider"></div>
+                <hr>
                 <div class="film-box-info">
                 
                     <p>Cape Medics provided medical services such as multiple ALS medics</p>
