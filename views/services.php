@@ -8,7 +8,32 @@
             <br>
             
                 <div class="flexbox" style="margin-bottom:50px;">
-                    <div class="card">
+                    <div class="card anim" data-delay="0s">
+ <div class="card-header" style="background-image: url('Images/photos/film2.jpeg');"></div>
+                        <div class="card-inner">
+                           
+                            <h4 style="color:#e21414">Film and TV</h4>
+                            <hr>
+                           <p class="card-text">Cape Medics provides Fire and rescue, medical and safety services regardless of the unit type.</p>
+                            <br>
+                            <a href="?page=film"><div class="card-button">find out more</div></a>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="card anim" data-delay="0s">
+ <div class="card-header" style="background-image: url('Images/backgrounds/background7.jpg');"></div>
+                        <div class="card-inner">
+                           
+                            <h4 style="color:#e21414">Events</h4>
+                            <hr>
+                            <p class="card-text">Cape Medics can provide all the medical, safety and fire and rescue support at your event no matter the size</p>
+                            <br>
+                            <a href="?page=events"><div class="card-button">find out more</div></a>
+                        </div>
+                        
+                    </div>
+                    <div class="card anim" data-delay="0s">
                         <div class="card-header" style="background-image: url('Images/photos/image2.jpg');"></div>
                         <div class="card-inner">
 
@@ -22,30 +47,7 @@
 
                     </div>
 
-                    <div class="card">
- <div class="card-header" style="background-image: url('Images/backgrounds/background7.jpg');"></div>
-                        <div class="card-inner">
-                           
-                            <h4 style="color:#e21414">Events</h4>
-                            <hr>
-                            <p class="card-text">Cape Medics can provide all the medical, safety and fire and rescue support at your event no matter the size</p>
-                            <br>
-                            <a href="?page=events"><div class="card-button">find out more</div></a>
-                        </div>
-                        
-                    </div>
-<div class="card">
- <div class="card-header" style="background-image: url('Images/photos/film2.jpeg');"></div>
-                        <div class="card-inner">
-                           
-                            <h4 style="color:#e21414">Film and TV</h4>
-                            <hr>
-                           <p class="card-text">Cape Medics provides Fire and rescue, medical and safety services regardless of the unit type.</p>
-                            <br>
-                            <a href="?page=film"><div class="card-button">find out more</div></a>
-                        </div>
-                        
-                    </div>
+
                     
                 </div>
         

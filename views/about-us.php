@@ -17,7 +17,7 @@
             </div>
         
         </div>
-        <div class="col-50">
+        <div class="col-50 text-div">
             
             <h1 class="header"><span style="text-decoration: overline;">AB</span>OUT US</h1>
         

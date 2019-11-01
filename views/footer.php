@@ -4,7 +4,7 @@
 ?>
 
 <footer >
-   <div style="text-align:center;padding:100px;width:100%;">
+   <div style="text-align:center;padding:100px;width:100%;" class="footer-div">
        <h4 class="header" style="color:white"><span style="text-decoration: overline;">OU</span>R DETAILS</h4>
        <div class="contact-div">
             <h6>Our Offices</h6>
