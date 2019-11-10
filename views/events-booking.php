@@ -1,4 +1,4 @@
-<div class="parallax-4" style="height:460px !important;background: url('Images/backgrounds/background2.jpg')!important;background-size: cover !important; !important;background-attachment: fixed !important;"><div class="small-info-box" style="opacity:0.4"></div></div>
+<?php include("bookingFormImage.php") ?>
         <div class="form-container-div">
             
             <form id="event-booking">
@@ -61,96 +61,17 @@
             
             <label for="event-description">Event description</label>
             <textarea name="event-description" rows="4"></textarea>
+                
             <h4>Build Up / Rig</h4>
             <hr>
             <h5>Do you require Cape Medics services for the build-up/Rig of the event </h5>
-            <div class="checkbox-form-container">
-                <div class="checkbox" allowOne="true">
-                    <label class="container">Yes
-                        <input class="cb" type="checkbox" name="yes" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                    <label class="container">No
-                        <input class="cb" type="checkbox" name="No" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                    
-                </div>
-                <div class="sub-form">
-                    <div class="input-block-50">
+            <?php include("rigDeRigSubForm.php") ?>
                 
-                        <label for="date-start-build-up">Date start</label>
-                        <input type="date" name="date-start-build-up">
-
-                    </div>
-                    <div class="input-block-50">
-                        <label for="date-end-build-up">Date end</label>
-                        <input type="date" name="date-end-build-up">
-
-                    </div>
-                    <div class="recursive-form">
-                        <h4 class="date-header"></h4>
-                        <div class="input-block-50">
-
-                            <label for="start-time-build-up">Start time</label>
-                            <input type="time" name="start-time-build-up">
-
-                        </div>
-                        <div class="input-block-50">
-
-                            <label for="end-time-build-up">End time</label>
-                            <input type="time" name="end-time-build-up">
-                    
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
             <h4>Strike / De-rig</h4>
             <hr>
             <h5>Do you require Cape Medics services for the strike/De-rig of the event </h5>
-            <div class="checkbox-form-container">
-                <div class="checkbox" allowOne="true">
-                    <label class="container">Yes
-                        <input class="cb" type="checkbox" name="yes" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                    <label class="container">No
-                        <input class="cb" type="checkbox" name="No" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                    
-                </div>
-                <div class="sub-form">
-                    <div class="input-block-50">
+            <?php include("rigDeRigSubForm.php") ?>
                 
-                        <label for="date-start-build-up">Date start</label>
-                        <input type="date" name="date-start-build-up">
-
-                    </div>
-                    <div class="input-block-50">
-                        <label for="date-end-build-up">Date end</label>
-                        <input type="date" name="date-end-build-up">
-
-                    </div>
-                    <div class="recursive-form">
-                        <h4 class="date-header"></h4>
-                        <div class="input-block-50">
-
-                            <label for="start-time-build-up">Start time</label>
-                            <input type="time" name="start-time-build-up">
-
-                        </div>
-                        <div class="input-block-50">
-
-                            <label for="end-time-build-up">End time</label>
-                            <input type="time" name="end-time-build-up">
-                    
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
             <h4>Important Event info</h4>
             <hr>
             <div class="input-block-50">
@@ -241,58 +162,8 @@
                 <br><br><br><br><br>
 
             </div>
-            
-            
-            <h4>Booking Details (Person making the booking)</h4>
-            <hr>
-            <div class="input-block-50">
                 
-                <label for="bookee-name">First name</label>
-                <input type="text" name="bookee-name">
-                
-                <label for="company">Company name</label>
-                <input type="text" name="company">
-                
-                <label for="number">Contact Number</label>
-                <input type="number" name="number">
-                
-                <label for="email">Email address</label>
-                <input type="text" name="email">
-                
-                
-            </div>
-            <div class="input-block-50">
-                
-                <label for="bookee-surname">Surname</label>
-                <input type="text" name="bookee-surname">
-                
-                <label for="alt-number">Alternate Contact Number</label>
-                <input type="number" name="alt-number">
-                
-                <label for="alt-email">Alternate Email address</label>
-                <input type="text" name="alt-email">
-                
-                <label for="request-number">Request Number</label>
-                <input type="number" name="request-number">
-                
-            </div>
-            
-            
-           
-            <h4>Payment Method</h4>
-            <hr>
-             <div class="checkbox-form-container">
-                <div class="checkbox" allowOne="true">
-                    <label class="container">EFT/Credit Card
-                        <input class="cb" type="checkbox" name="ils" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                    <label class="container">Account
-                        <input class="cb" type="checkbox" name="als" value=1>
-                        <span class="checkmark"><span class="fas fa-check"></span></span>
-                    </label>
-                </div>
-            </div>
+            <?php include("bookingSubForm.php") ?>
             <?php include("termsAndConditions.php") ?>
                 
             <button class="fill book">make booking request</button>
